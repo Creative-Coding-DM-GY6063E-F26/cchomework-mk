@@ -1,14 +1,14 @@
 // change the quotes in this array. Be mindful of the quotation marks!
 // this is the only part of the file you need to edit!
 const quotes = [
-  { text: "the intersection of programming, design, and art", source: "Scott" },
-  { text: "a chance for code to be wrong", source: "Sara" },
-  { text: "surprise, exploration, and aesthetic exploration", source: "Sally" },
-  { text: "process over results", source: "Sam" },
-  { text: "form over function", source: "Sean" },
-  { text: "iterative and experimental", source: "Scooby" },
-  { text: "a community of practice", source: "Seth" },
-  { text: "an opportunity to stick it to the man", source: "Shifty-eyed Susan" }
+  { text: "A bridge between art, design, and computer science", source: "Maddie" },
+  { text: "A method for building interactive experiences", source: "Sara" },
+  { text: "A way to create generative systems", source: "Sally" },
+  { text: "An experimental creative process", source: "Sam" },
+  { text: "Code as an artistic medium", source: "Sean" },
+  { text: "A combination of programming and visual aesthetics", source: "Scooby" },
+  { text: "Expressive rather than purely functional programming", source: "Seth" },
+  { text: "Coding for artistic expression", source: "Shifty-eyed Susan" }
 ];
 // no need to edit anything below this line! 
 // if you have made an error, you can check your history to see what might have gone wrong
@@ -54,5 +54,5 @@ function newQuote() {
 }
 
 function mousePressed() {
-  newQuote(); /
+  newQuote(); 
 }
