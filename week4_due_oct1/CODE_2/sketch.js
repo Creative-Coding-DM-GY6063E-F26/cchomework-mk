@@ -1,6 +1,11 @@
 p5.disableFriendlyErrors = true;
 
-let numCircles = 10;
+let bDoExportSvg = false;
+
+let diaMin = 30;
+let diaMax = 500;
+let diaStep = 18;
+let offset = 40;
 
 function setup() {
   createCanvas(500, 500);
@@ -24,16 +29,18 @@ function draw() {
     }
   }
 
-  
-  let x0ff = width/4;
-  
-  drawCircles(3);
-  drawLines( x0ff, 10);
+  background(255);
+  stroke(0);
+  strokeWeight(6);
+  noFill();
 
-  
+  for (let dia = diaMin; dia <= diaMax; dia += diaStep) {
+    ellipse(width / 2 - offset / 2, height / 2, dia, dia);
+    ellipse(width / 2 + offset / 2, height / 2, dia, dia);
   }
 
   if (bDoExportSvg) {
     endRecordSvg();
     bDoExportSvg = false;
   }
+}

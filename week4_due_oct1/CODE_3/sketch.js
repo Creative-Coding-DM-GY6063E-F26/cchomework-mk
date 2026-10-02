@@ -1,6 +1,9 @@
 p5.disableFriendlyErrors = true;
 
-let numCircles = 10;
+let bDoExportSvg = false;
+
+let lineStep = 18;
+let tilt = 40;
 
 function setup() {
   createCanvas(500, 500);
@@ -24,16 +27,21 @@ function draw() {
     }
   }
 
-  
-  let x0ff = width/4;
-  
-  drawCircles(3);
-  drawLines( x0ff, 10);
+  background(255);
+  stroke(0);
+  strokeWeight(6);
+  noFill();
 
-  
+  for (let x = 0; x <= width; x += lineStep) {
+    line(x, 0, x, height);
+  }
+
+  for (let x = -tilt; x <= width + tilt; x += lineStep) {
+    line(x, 0, x + tilt, height);
   }
 
   if (bDoExportSvg) {
     endRecordSvg();
     bDoExportSvg = false;
   }
+}
